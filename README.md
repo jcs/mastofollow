@@ -18,7 +18,9 @@ that only reposts political things.
 This is a hacky Ruby script that will:
 
 1. Fetch your list of followers (paginating as necessary)
-2. Fetch the RSS feed of each follower and gather their recent statuses
+2. Fetch your list of followings and remove them from followers list
+2. Fetch the RSS feed of each remaining follower and gather their recent
+statuses
 3. Sort all statuses in reverse chronological order
 4. Dump out static HTML files of each page of statuses (100 at a time)
 5. Spin up a WEBrick to provide a quick interface to view the static files

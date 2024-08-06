@@ -57,6 +57,19 @@ while true do
   end
 end
 
+page = 1
+while true do
+  puts "fetching following page #{page}..."
+  js = s.fetch("#{ME}/following.json?page=#{page}").json
+  followers -= js["orderedItems"]
+
+  if js["next"]
+    page += 1
+  else
+    break
+  end
+end
+
 statuses = []
 
 followers.shuffle.each_with_index do |f,x|
