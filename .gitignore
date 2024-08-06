@@ -1,0 +1,4 @@
+.bundle
+statuses*.html
+statuses.json
+vendor/
